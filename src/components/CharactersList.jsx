@@ -35,7 +35,7 @@ const CharactersList = () => {
     )
   })
 
-  return <div>{renderCards}</div>
+  return <div className="md:grid md:grid-cols-5 flex flex-col">{renderCards}</div>
 }
 
 export default CharactersList

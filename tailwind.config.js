@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    transform: {
+      perspective: "1000px", // Habilita la perspectiva para transformaciones 3D
+    },
   },
   plugins: [],
 }
