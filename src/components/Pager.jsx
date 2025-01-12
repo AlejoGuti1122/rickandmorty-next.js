@@ -56,11 +56,11 @@ const Pager = () => {
     <div className="">
       <CharactersList currentPage={currentPage} />
       <div
-        className="mt-2 ml-5"
+        className="mt-2 flex justify-center items-center"
         style={styles.pager}
       >
         <button
-          className=" w-20  text-xs bg-gray-600 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
+          className=" w-20 ml-3  text-xs bg-gray-600 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
           onClick={handlePrevious}
           disabled={currentPage === 1}
           style={currentPage === 1 ? styles.disabledButton : {}}
@@ -83,7 +83,7 @@ const Pager = () => {
           ))}
         </div>
         <button
-          className="w-20 mr-5  text-xs bg-gray-600 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
+          className="w-20 mr-3  text-xs bg-gray-600 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
           onClick={handleNext}
           disabled={currentPage === 15}
           style={currentPage === 15 ? styles.disabledButton : {}}
