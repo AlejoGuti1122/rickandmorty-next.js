@@ -12,13 +12,13 @@ const CharacterCard = ({ id, name, status, species, type, gender, image }) => {
         />
       </div>
       <div className="text-center mt-2">
-        <p>{name}</p>
+        <p className="text-white">{name}</p>
       </div>
-      <div className="text-center">
+      <div className="text-center text-white">
         {/* <p>ID: {id}</p> */}
-        <p>Status: {status}</p>
+        <p className="text-white">Status: {status}</p>
       </div>
-      <div className="text-center">
+      <div className="text-center text-white">
         <p>Species: {species}</p>
         <p>Type: {type}</p>
         <p>Gender: {gender}</p>

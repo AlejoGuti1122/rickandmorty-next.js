@@ -80,7 +80,7 @@ const Pager = () => {
           ))}
         </div>
         <button
-          className="w-20 mr-7 text-xs bg-gray-600 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
+          className="w-20 mr-5 text-xs bg-gray-600 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
           onClick={handleNext}
           disabled={currentPage === 15}
           style={currentPage === 15 ? styles.disabledButton : {}}
