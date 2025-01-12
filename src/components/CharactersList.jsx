@@ -4,16 +4,16 @@ import { getCharacters } from "@/services/api"
 import React, { useEffect, useState } from "react"
 import CharacterCard from "./CharacterCard"
 
-const CharactersList = () => {
+const CharactersList = ({ currentPage }) => {
   const [characters, setCharacters] = useState([])
 
   useEffect(() => {
-    getCharactersFunction()
-  }, [])
+    getCharactersFunction(currentPage)
+  }, [currentPage])
 
-  const getCharactersFunction = async () => {
+  const getCharactersFunction = async (page) => {
     try {
-      const response = await getCharacters()
+      const response = await getCharacters(page)
       setCharacters(response)
       console.log(response)
     } catch (error) {
@@ -35,7 +35,9 @@ const CharactersList = () => {
     )
   })
 
-  return <div className="md:grid md:grid-cols-5 flex flex-col">{renderCards}</div>
+  return (
+    <div className="md:grid md:grid-cols-5 flex flex-col">{renderCards}</div>
+  )
 }
 
 export default CharactersList
