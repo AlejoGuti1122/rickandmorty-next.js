@@ -53,16 +53,16 @@ const Pager = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <CharactersList currentPage={currentPage} />
-      <div className="mt-2" style={styles.pager}>
+      <div className="mt-2 ml-2" style={styles.pager}>
         <button
-          className="bg-gray-600 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
+          className="w-20 ml-4 text-xs bg-gray-600 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
           onClick={handlePrevious}
           disabled={currentPage === 1}
           style={currentPage === 1 ? styles.disabledButton : {}}
         >
-          Previous
+          Back
         </button>
         <div style={styles.pageNumbers}>
           {Array.from({ length: 15 }, (_, index) => (
@@ -80,7 +80,7 @@ const Pager = () => {
           ))}
         </div>
         <button
-          className="w-[99.59px] bg-gray-600 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
+          className="w-20 mr-6 text-xs bg-gray-600 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
           onClick={handleNext}
           disabled={currentPage === 15}
           style={currentPage === 15 ? styles.disabledButton : {}}
